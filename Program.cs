@@ -37,7 +37,10 @@ namespace DiscordBotTemplateNet8
 
             Commands = Client.UseCommandsNext(commandsConfig);
 
+            // Register command modules
             Commands.RegisterCommands<Basic>();
+            Commands.RegisterCommands<PingCommand>();
+            Commands.RegisterCommands<Playground>();
 
             Console.WriteLine("============================== \n" +
                               "NET 8.0 C# Discord Bot \n" +
